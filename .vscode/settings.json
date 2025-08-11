@@ -1,0 +1,26 @@
+{
+    "cSpell.words": [
+        "antipidorandel",
+        "BYTEA",
+        "GOARCH",
+        "jackc",
+        "ldflags",
+        "nonroot",
+        "pgxpool",
+        "Ryabinkin",
+        "TIMESTAMPTZ",
+        "trimpath",
+        "Бэкапы",
+        "валидирует",
+        "игнорится",
+        "логирует",
+        "постгрой"
+    ],
+    "gopls": { "directoryFilters": ["+server"] },
+    "go.toolsEnvVars": { "GOWORK": "${workspaceFolder}/go.work" }
+
+    
+
+    
+}
+

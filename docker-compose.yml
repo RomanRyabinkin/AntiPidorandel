@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: anti
+      POSTGRES_PASSWORD: anti
+      POSTGRES_DB: anti
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U anti -d anti"]
+      interval: 3s
+      timeout: 2s
+      retries: 20
+
+  server:
+    build:
+      context: ./server
+      dockerfile: DockerFile
+    environment:
+      DATABASE_URL: "postgres://anti:anti@db:5432/anti?sslmode=disable"
+      ADDR: ":8080"
+    ports: ["8080:8080"]
+    depends_on:
+      db:
+        condition: service_healthy

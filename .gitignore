@@ -1,0 +1,45 @@
+# OS мусор
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Логи / дампы
+**/*.log
+*.tmp
+*.swp
+*.swo
+
+# Окружение
+.env
+.env.*
+!.env.example
+
+# Сертификаты/ключи
+*.key
+*.pem
+*.crt
+
+# Бэкапы/дампы БД
+*.sql
+*.sqlite
+*.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (на будущее для UI)
+node_modules/
+dist/
+
+/go.mod
+/go.work.sum

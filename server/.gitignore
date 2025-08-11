@@ -1,0 +1,21 @@
+# Сборочные артефакты
+/server
+*.exe
+*.test
+*.out
+bin/
+build/
+coverage.*
+*.coverprofile
+*.pprof
+
+# Логи
+**/*.log
+
+# Локальные env
+.env
+.env.*
+!.env.example
+
+# IDE файлы
+.vscode/
