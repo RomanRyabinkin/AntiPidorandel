@@ -7,11 +7,18 @@ theme:
   language: ru
   features:
     - navigation.sections
-    # Убираем navigation.instant из-за конфликта с переключателем языков
+    - navigation.instant
     - content.code.copy
     - content.tabs.link
     - search.suggest
     - toc.integrate
+  i18n:
+    prev: 
+      ru: Предыдущая
+      en: Previous
+    next:
+      ru: Следующая
+      en: Next
   palette:
     - scheme: default
       primary: indigo
@@ -29,13 +36,17 @@ markdown_extensions:
   - pymdownx.details
 
 plugins:
-  - search
+  - search:
+      lang: 
+        - ru
+        - en
   - i18n:
+      default_language: ru
       languages:
         - locale: ru
+          default: true
           name: Русский
           build: true
-          default: true
           site_name: Spirit Docs
           nav:
             - Обзор: ru/index.md
