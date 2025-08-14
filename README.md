@@ -8,7 +8,7 @@
 
 ### Documentation
 
-Link: https://romanryabinkin.github.io/AntiPidorandel/en/
+Link: [https://romanryabinkin.github.io/AntiPidorandel/en/](https://romanryabinkin.github.io/AntiPidorandel/en/en/)
 
 
 ---
@@ -199,7 +199,7 @@ TBD — MIT
 
 ### Документация
 
-Ссылка: https://romanryabinkin.github.io/AntiPidorandel/ru/
+Ссылка: h[ttps://romanryabinkin.github.io/AntiPidorandel/ru/](https://romanryabinkin.github.io/AntiPidorandel/en/en/)
 
 
 ---
