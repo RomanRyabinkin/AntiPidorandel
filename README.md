@@ -6,6 +6,15 @@
 
 **AntiPidorandel** is a privacy-first, invite-only messenger. The server acts as a **blind relay**: it stores and forwards only **encrypted envelopes** (E2EE). Content is never decrypted server-side, and server metadata is minimized.
 
+### Documentation
+
+Link: https://romanryabinkin.github.io/AntiPidorandel/en/
+
+
+---
+
+
+
 ### Features
 
 * **Blind Relay Server (Go)**
@@ -187,6 +196,13 @@ TBD — MIT
 > **Ветка по умолчанию**: `master` (весь актуальный код и документация находятся в этой ветке).
 
 **AntiPidorandel** — приватный мессенджер. Сервер выступает как **«слепой» ретранслятор**: он хранит и пересылает только **зашифрованные конверты** (E2EE). Контент никогда не расшифровывается на сервере, а метаданные сведены к минимуму.
+
+### Документация
+
+Ссылка: https://romanryabinkin.github.io/AntiPidorandel/ru/
+
+
+---
 
 ### Возможности
 
