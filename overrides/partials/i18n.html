@@ -1,0 +1,34 @@
+{% macro t(key) %}{{ {
+  "language": {
+    "ru": "Русский",
+    "en": "English"
+  },
+  "nav": {
+    "ru": {
+      "overview": "Обзор",
+      "quick_start": "Быстрый старт",
+      "configuration": "Конфигурация",
+      "architecture": "Архитектура",
+      "protocol": "Протокол",
+      "storage": "Хранилище",
+      "censorship": "НЕТ ЦЕНЗУРЕ!",
+      "security": "Безопасность",
+      "operations": "Операции",
+      "roadmap": "Дорожная карта",
+      "adr": "ADR"
+    },
+    "en": {
+      "overview": "Overview",
+      "quick_start": "Quick Start",
+      "configuration": "Configuration",
+      "architecture": "Architecture",
+      "protocol": "Protocol",
+      "storage": "Storage",
+      "censorship": "Censorship Resistance",
+      "security": "Security",
+      "operations": "Operations",
+      "roadmap": "Roadmap",
+      "adr": "ADR"
+    }
+  }
+}[key] }}{% endmacro %}
