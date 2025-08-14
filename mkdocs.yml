@@ -1,0 +1,84 @@
+site_name: Spirit Docs
+site_url: https://RomanRyabinkin.github.io/Spirit/
+repo_url: https://github.com/RomanRyabinkin/Spirit
+
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.sections
+    # Убираем navigation.instant из-за конфликта с переключателем языков
+    - content.code.copy
+    - content.tabs.link
+    - search.suggest
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.emoji
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+  - pymdownx.details
+
+plugins:
+  - search
+  - i18n:
+      languages:
+        - locale: ru
+          name: Русский
+          build: true
+          default: true
+          site_name: Spirit Docs
+          nav:
+            - Обзор: ru/index.md
+            - Быстрый старт: ru/quickstart.md
+            - Конфигурация: ru/configuration.md
+            - Архитектура:
+                - P2P и луковая маршрутизация: ru/routing-onion.md
+                - Узлы-почтовики (Mailbox Node): ru/node-mailbox.md
+                - Обнаружение и бутстрап: ru/discovery.md
+            - Протокол: ru/protocol.md
+            - Хранилище: ru/storage.md
+            - НЕТ ЦЕНЗУРЕ!: ru/censorship.md
+            - Безопасность: ru/security.md
+            - Операции: ru/operations.md
+            - Дорожная карта: ru/roadmap.md
+            - ADR:
+                - 0001 — Именование и цели: ru/adr/0001-project-rename-and-goals.md
+                - 0002 — Go + PostgreSQL: ru/adr/0002-choose-go-postgres.md
+                - 0003 — Контракт WS-кадров: ru/adr/0003-ws-frame-contract.md
+                - 0004 — Mailbox API: ru/adr/0004-mailbox-node-api.md
+                - 0005 — Цензуроустойчивость: ru/adr/0005-censorship-resilience.md
+        - locale: en
+          name: English
+          build: true
+          site_name: Spirit Docs
+          nav:
+            - Overview: en/index.md
+            - Quick Start: en/quickstart.md
+            - Configuration: en/configuration.md
+            - Architecture:
+                - P2P & Onion Routing: en/routing-onion.md
+                - Mailbox Nodes: en/node-mailbox.md
+                - Discovery & Bootstrap: en/discovery.md
+            - Protocol: en/protocol.md
+            - Storage: en/storage.md
+            - Censorship Resistance: en/censorship.md
+            - Security: en/security.md
+            - Operations: en/operations.md
+            - Roadmap: en/roadmap.md
+            - ADR:
+                - 0001 — Project Rename and Goals: en/adr/0001-project-rename-and-goals.md
+                - 0002 — Go + PostgreSQL: en/adr/0002-choose-go-postgres.md
+                - 0003 — WebSocket Frame Contract: en/adr/0003-ws-frame-contract.md
+                - 0004 — Mailbox API: en/adr/0004-mailbox-node-api.md
+                - 0005 — Censorship Resilience: en/adr/0005-censorship-resilience.md
+
