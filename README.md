@@ -45,6 +45,7 @@ Link: [https://romanryabinkin.github.io/AntiPidorandel/en/](https://romanryabink
   * `internal/config/` — env config
   * `internal/wire/` — on-the-wire frame contracts (JSON)
   * `DockerFile` — multi-stage build (distroless runtime)
+  * `docs` — project's documentation
   * `go.mod`, `go.sum`, `.gitignore`, `.dockerignore`
 * **docker-compose.yml** (repo root) — local Postgres + server
 * **go.work** (repo root) — Go workspace, includes `./server`
@@ -234,6 +235,7 @@ TBD — MIT
   * `internal/config/` — конфигурация из ENV
   * `internal/wire/` — контракт JSON-кадров «на проводе»
   * `DockerFile` — многостадийная сборка (distroless-рантайм)
+  * `docs` — документация проекта
   * `go.mod`, `go.sum`, `.gitignore`, `.dockerignore`
 * **docker-compose.yml** (в корне репозитория) — локальный запуск Postgres + сервера
 * **go.work** (в корне) — Go-workspace, подключает `./server`
