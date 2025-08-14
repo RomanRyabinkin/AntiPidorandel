@@ -2,9 +2,6 @@ name: docs
 on:
   push:
     branches: [ master, DocumentationDevelop ]
-    paths:
-      - 'docs/**'
-      - 'mkdocs.yml'
 
 permissions:
   contents: write
