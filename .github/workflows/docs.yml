@@ -1,30 +1,39 @@
 name: Docs
-
 on:
   push:
-    branches:
-      - docs
-  pull_request:
-    branches:
-      - docs
+    branches: [ docs ]
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  build-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
       - uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-      
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-      
-      - name: Build and deploy
-        run: mkdocs gh-deploy --force --config-file mkdocs.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: pip install -r requirements.txt
+      - run: mkdocs build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        with:
+          enablement: true
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'site'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
